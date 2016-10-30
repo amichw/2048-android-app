@@ -54,12 +54,12 @@ public class BoardView extends GridLayout {
      this.invalidate();
     // swipeUp();
      Animation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
-     alphaAnimation.setDuration(1000);
+     alphaAnimation.setDuration(600);
 
      AnimationSet set = new AnimationSet(true);
      set.addAnimation(alphaAnimation);
      LayoutAnimationController controller =
-             new LayoutAnimationController(set, 1.25f);
+             new LayoutAnimationController(set, 0.005f);
      this.setLayoutAnimation(controller);
 
  }
@@ -106,6 +106,7 @@ public class BoardView extends GridLayout {
 
             }
         }
+        this.startLayoutAnimation();
     }
 
     void swipeLeft()
@@ -146,9 +147,9 @@ public class BoardView extends GridLayout {
                 if (tileMoved)
                 {
                     TranslateAnimation translate = new TranslateAnimation(Animation.RELATIVE_TO_SELF,0
-                            , Animation.RELATIVE_TO_SELF,-(j-tempY+1)
+                            , Animation.RELATIVE_TO_SELF,-(j-tempY+1)//amount of tiles to move.
                             ,Animation.RELATIVE_TO_SELF ,0 ,Animation.RELATIVE_TO_SELF , 0 );
-                    translate.setDuration(200);
+                    translate.setDuration((j-tempY+1)*200);//duration times number of tiles.
                     this.getChildAt(n*i+j).startAnimation(translate);
                 }
 

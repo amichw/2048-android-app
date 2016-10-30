@@ -3,6 +3,10 @@ package com.exercises.ami.my2048;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.LayoutAnimationController;
 
 import com.exercises.ami.my2048.model.GameBoard2048;
 
@@ -14,19 +18,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boardView =(BoardView)findViewById(R.id.BoardGridView);
-        boardView.setOnTouchListener(new OnSwipeTouchListener(this){
+        boardView = (BoardView) findViewById(R.id.BoardGridView);
+        boardView.setOnTouchListener(new OnSwipeTouchListener(this) {
             @Override
-            public void onSwipeRight() { boardView.swipeRight();}
+            public void onSwipeRight() {
+                boardView.swipeRight();
+            }
+
             @Override
-            public void onSwipeLeft() { boardView.swipeLeft();}
+            public void onSwipeLeft() {
+                boardView.swipeLeft();
+            }
+
             @Override
-            public void onSwipeUp() { boardView.swipeUp();}
+            public void onSwipeUp() {
+                boardView.swipeUp();
+            }
+
             @Override
-            public void onSwipeDown() { boardView.swipeDown();}
+            public void onSwipeDown() {
+                boardView.swipeDown();
+            }
         });
         boardView.initializeView(4);
-       // boardView.swipeUp();
-        boardView.invalidate();
+        // boardView.swipeUp();
+        // boardView.invalidate();
     }
 }
