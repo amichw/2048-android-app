@@ -15,5 +15,6 @@
     <color name="onetwoeight">#F47C64</color>
     <color name="twofivesix">#EFCC64</color>
     <color name="fiveonetwo">#E9CB54</color>
+    <color name="transparent">#0000</color>
 
 </resources>
