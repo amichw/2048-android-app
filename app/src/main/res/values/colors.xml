@@ -10,11 +10,14 @@
     <color name="four">#F2DF9A</color>
     <color name="eight">#f5bb88</color>
     <color name="sixteen">#F4965E</color>
-    <color name="thirtytwo">#F08159</color>
-    <color name="sixtyfour">#F95D39</color>
-    <color name="onetwoeight">#F47C64</color>
+    <color name="thirtytwo">#F07859</color>
+    <color name="sixtyfour">#F93339</color>
+    <color name="onetwoeight">#F47Cb4</color>
     <color name="twofivesix">#EFCC64</color>
-    <color name="fiveonetwo">#E9CB54</color>
+    <color name="fiveonetwo">#E0a044</color>
+    <color name="ten_two_four">#c53</color>
+    <color name="twenty_forty_eight">#e27</color>
+
     <color name="transparent">#0000</color>
 
 </resources>
