@@ -8,24 +8,50 @@
     android:paddingRight="5dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.exercises.ami.my2048.MainActivity">
+
+
+    <Button
+        android:text="New Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btn_new_game"
+        android:elevation="16dp" />
+
+    <Button
+        android:text="Take Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btn_new_game"
+        android:layout_marginStart="24dp"
+        android:id="@+id/btn_take_back_turn"
+        android:elevation="12dp"
+        android:layout_alignParentTop="true" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:id="@+id/RegularGridView"
         android:background="@drawable/background"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="74dp"
-        android:layout_height="350dp">
-        </GridLayout>
+        android:layout_height="350dp"
+        android:layout_below="@id/btn_new_game"
+        android:layout_marginTop="25dp"
+        >
+    </GridLayout>
 
     <com.exercises.ami.my2048.BoardView
         android:layout_width="match_parent"
         android:id="@+id/BoardGridView"
         android:background="#0000"
-        android:layout_alignParentTop="true"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="74dp"
-        android:layout_height="350dp">
+        android:layout_below="@id/btn_new_game"
+        android:layout_marginTop="25dp"
+        >
 
     </com.exercises.ami.my2048.BoardView>
+
+
 </RelativeLayout>
